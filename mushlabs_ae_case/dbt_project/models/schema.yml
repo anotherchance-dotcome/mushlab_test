@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: raw_gho_gender_inequality
+    columns: 
+      - name: "Value"
+        data_type: "int"
+      - name: "Dim1"
+        data_type: "varchar"
+  
+  - name: raw_countries
+    columns:
+      - name: "TimeDim"
+        data_type: "int"
+      - name: "SpatialDim"
+        data_type: "varchar"

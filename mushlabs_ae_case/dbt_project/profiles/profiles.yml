@@ -1,0 +1,8 @@
+mushlabs_ae_case:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: ../../../dbt_duckdb.db
+      #path: ../../../runs.db
+      schema: core

@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: core
+    tables:
+      - name: raw_gho_gender_inequality
+        description: "To recognize the gender inequality." #add
+      - name: raw_gho_countries
+        description: "To retrive the name of countries." #add
+  - name: pg_catalog
+    tables:
+      - name: pg_constraint

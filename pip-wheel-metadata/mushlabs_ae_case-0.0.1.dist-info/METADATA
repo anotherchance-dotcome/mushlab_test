@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mushlabs-ae-case
+Version: 0.0.1
+Summary: 
+Author: Vinnie
+Author-email: vdalpiccol@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: dagit (==1.3.5)
+Requires-Dist: dagster (==1.3.5)
+Requires-Dist: dagster-dbt (==0.19.5)
+Requires-Dist: dagster-duckdb-pandas (>=0.19.5,<0.20.0)
+Requires-Dist: dbt-core (<1.5.0)
+Requires-Dist: dbt-duckdb (<1.5.0)
