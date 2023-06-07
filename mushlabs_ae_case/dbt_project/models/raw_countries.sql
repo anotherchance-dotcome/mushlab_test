@@ -1,19 +1,17 @@
-With genders as(
+With country_data as(
     select 
-        Value,
-        Dim1
-    from core.raw_gho_gender_inequality
-    group by Value,Dim1
+        raw_gho_gender_inequality.Value as number_of_people,
+        TimeDim as year,
+        SpatialDim as country
+
+    from {{ source('core', 'raw_gho_countries') }} 
+    cross join {{ source('core', 'raw_gho_gender_inequality') }}
 )
 
 select 
-    genders.Value,
-    genders.DIm1,
-    raw_gho_countires.TimeDim,
-    raw_gho_countires.SpatialDim
-
-from core.raw_gho_countires  
-
-cross join genders
-
-Where raw_gho_countries.SpatialDim = 'HTI'
+    country,
+    count(nums_of_people) as country_total
+from country_data
+group by country
+order by country_total desc
+Limit 15
